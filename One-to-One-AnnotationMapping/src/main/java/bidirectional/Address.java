@@ -20,8 +20,10 @@ public class Address
 	@Id
 	@GeneratedValue(generator="gen")
 	private int addressid;
+	
 	private String houseNo;
 	private String streetName;
+	
 	@OneToOne(cascade=CascadeType.ALL)
 	@PrimaryKeyJoinColumn
 	private Student student;
